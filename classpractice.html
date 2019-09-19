@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> registration details</title>
+        <style>
+        h1,h3{
+            color: black;
+            font-size: 40px;
+            text-align: center;
+        
+        }
+        table {
+            margin-left: 650px;
+            border:2px solid white;
+            background-color: beige;
+        }
+        td{
+            padding: 10px;
+            border: 2px solid white
+
+        }
+        #button{
+            margin-left: 740px;}
+            #button{
+                margin-left: 740px;
+            }
+        
+
+        
+        </style>
+        <script type="text/javascript">
+        function show()
+        {
+            var fname=document.getElementById("txtbox1").value;
+            var lname=document.getElementById("txtbox2").value;
+            var age=document.getElementById("age").value;
+            var address=document.getElementById("address").value;
+            var gender=document.getElementById("gender").value;
+            confirm("you have entered"+ "name:"+fname+" " +lname+" + " Age: "+age+ " Adress:"+ adress+"gender"+gender+"do you wish to
+            confirm these details?");
+    
+        }
+        function changecolor(val)
+        {
+            if((val.value==""))||(val.value==null)
+            {
+                val.style.background="pink";
+            }
+            else{
+                val.style.background="#FFFFFF";
+            }
+        }
+        </script>
+    </head>
+    <body>
+    <h1> User registration details</h1>
+    <h3> please fill the details and get registered</h3> <br/><br/>
+    <table>
+    <tr>
+    <td> first name </td>
+    <td> <input type="text" name="name1" id="txtbox1" onblur="changecolor(this)"></td>
+    </tr>
+    <tr>
+    <td> last name </td>
+    <td> <input type="text" name="name2" id="txtbox2" onblur="changecolor(this)"></td>
+    </tr>
+    <tr>
+    <td> Age: </td>
+    <td> <input type="text" name="age_box" id="age" onblur="changecolor(this)"></td>
+    </tr>
+    <tr>
+    <td> Address: </td>
+    <td> <textarea rows="5" name="ADDRESS_box" id="address" onblur="changecolor(this)"> </textarea></td>
+    </tr>
+    <tr>
+    <td> Gender: </td>
+    <td> <select name="gender" id="gender"> <option value="male"> male</option><option value="female">female</option></select></td>
+    </tr>
+    </table>
+    <br/><input id="button" type="button" value="register me" onclick="show()">
+    </body>
+</html>
